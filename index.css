@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --warna-dasar: #faf6ef;
+  --warna-kertas: #ffffff;
+  --warna-teks: #2c2418;
+  --warna-teks-pudar: #7a6f5d;
+  --warna-aksen: #7a3b2e;
+  --warna-aksen-pudar: #f1e3da;
+  --warna-garis: #e3d9c9;
+  --warna-sukses: #3f6b4a;
+  --warna-sukses-bg: #e7f0e6;
+  --warna-bahaya: #a8402f;
+  --warna-bahaya-bg: #fbe9e4;
+  --warna-warning: #b07a23;
+  --warna-warning-bg: #fbf0dc;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--warna-dasar);
+  color: var(--warna-teks);
+}
+
+h1, h2, h3 {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: opacity 0.15s ease;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+input, select {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--warna-garis);
+  border-radius: var(--radius);
+  background: var(--warna-kertas);
+  color: var(--warna-teks);
+  width: 100%;
+}
+
+input:focus, select:focus {
+  outline: 2px solid var(--warna-aksen-pudar);
+  border-color: var(--warna-aksen);
+}
+
+.btn-utama {
+  background: var(--warna-aksen);
+  color: #fff;
+}
+
+.btn-tepi {
+  background: transparent;
+  border: 1px solid var(--warna-garis);
+  color: var(--warna-teks);
+}
+
+.btn-bahaya {
+  background: var(--warna-bahaya-bg);
+  color: var(--warna-bahaya);
+}
+
+.kartu {
+  background: var(--warna-kertas);
+  border: 1px solid var(--warna-garis);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+}
+
+.label-status {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+}
+
+.label-dipinjam {
+  background: var(--warna-warning-bg);
+  color: var(--warna-warning);
+}
+
+.label-dikembalikan {
+  background: var(--warna-sukses-bg);
+  color: var(--warna-sukses);
+}
+
+.label-terlambat {
+  background: var(--warna-bahaya-bg);
+  color: var(--warna-bahaya);
+}
